@@ -81,3 +81,11 @@ body {
     border-bottom: 0;
   }
 }
+
+.step {
+    height: 100%;
+}
+
+.registration {
+    height: 300px;
+}

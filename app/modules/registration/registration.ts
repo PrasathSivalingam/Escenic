@@ -18,19 +18,42 @@
 
 module app.web.controllers {
     export interface IRegistrationScope extends ng.IScope {
-        //viewModel: AccessControlController;
+        //viewModel: RegistrationCtrl;
     }
 
     export interface IRegistrationCtrl {
-    //    $scope: IAccessControlScope;
+        selectedStep:number;
+        steps: any;
+        goToStep(direction:number):any;
     }
 
     export class RegistrationCtrl implements IRegistrationCtrl {
-        static $inject = ['$scope'];
-
-        constructor(public $scope: IRegistrationScope) {
+        static $inject = [];
+        public selectedStep:number = 0;
+        public steps : any =[];
+        constructor() {
             
+            this.steps = [
+                {
+                    title: 'Step 1',
+                    templateUrl: 'modules/registration/step1.html'
+                }, {
+                    title: 'Step 2',
+                    templateUrl: 'modules/registration/step2.html'
+                },{
+                    title: 'Step 3',
+                    templateUrl: 'modules/registration/step3.html'
+                },{
+                    title: 'Step 4',
+                    templateUrl: 'modules/registration/step4.html'
+                }
+            ];
         }
+
+        public goToStep(direction:number) {
+            this.selectedStep = this.selectedStep + direction;
+        }
+
 
     }
 }

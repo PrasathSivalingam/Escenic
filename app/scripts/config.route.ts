@@ -4,7 +4,8 @@ application.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
         templateUrl: 'modules/registration/registration.html',
-        controller: 'app.web.controllers.RegistrationCtrl'
+        controller: 'app.web.controllers.RegistrationCtrl',
+        controllerAs : 'viewModel'
     })
         .otherwise({
         redirectTo: '/'

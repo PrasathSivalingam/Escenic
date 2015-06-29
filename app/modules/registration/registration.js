@@ -21,10 +21,32 @@ var app;
         var controllers;
         (function (controllers) {
             var RegistrationCtrl = (function () {
-                function RegistrationCtrl($scope) {
-                    this.$scope = $scope;
+                function RegistrationCtrl() {
+                    this.selectedStep = 0;
+                    this.steps = [];
+                    this.steps = [
+                        {
+                            title: 'Step 1',
+                            templateUrl: 'modules/registration/step1.html'
+                        },
+                        {
+                            title: 'Step 2',
+                            templateUrl: 'modules/registration/step2.html'
+                        },
+                        {
+                            title: 'Step 3',
+                            templateUrl: 'modules/registration/step3.html'
+                        },
+                        {
+                            title: 'Step 4',
+                            templateUrl: 'modules/registration/step4.html'
+                        }
+                    ];
                 }
-                RegistrationCtrl.$inject = ['$scope'];
+                RegistrationCtrl.prototype.goToStep = function (direction) {
+                    this.selectedStep = this.selectedStep + direction;
+                };
+                RegistrationCtrl.$inject = [];
                 return RegistrationCtrl;
             })();
             controllers.RegistrationCtrl = RegistrationCtrl;
