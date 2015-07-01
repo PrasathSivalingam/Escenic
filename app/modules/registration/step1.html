@@ -1,11 +1,13 @@
 ﻿<div>
     <md-input-container>
-        <label>Full name</label>
-        <input ng-model="user.title">
+        <input ng-model="viewModel.registration.fullName" placeholder="Full name (required)" ng-required="true">
     </md-input-container>
 
     <md-input-container>
-        <label>Date of birth</label>
-        <input ng-model="user.email" type="date">
+        <input ng-model="viewModel.registration.email" type="email" placeholder="Email (required)" ng-required="true">
+    </md-input-container>
+
+    <md-input-container>
+        <input ng-model="viewModel.registration.dateOfBirth" placeholder="Date of birth" type="date">
     </md-input-container>
 </div>

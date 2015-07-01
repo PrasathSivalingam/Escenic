@@ -1,3 +1,29 @@
 ﻿<div>
-    test
+    <h3>Summary</h3>
+    <p>
+        <label>Full Name : </label>
+        <span>{{viewModel.registration.fullName}}</span>
+    </p>
+
+    <p>
+        <label>Email : </label>
+        <span>{{viewModel.registration.email }}</span>
+    </p>
+
+    <p>
+        <label>Date of birth : </label>
+        <span>{{viewModel.registration.dateOfBirth | date:'dd.MM.yyyy' }}</span>
+    </p>
+    <p>
+        <label>Gender : </label>
+        <span>{{viewModel.registration.gender}}</span>
+    </p>
+    <p>
+        <label>Favourite city : </label>
+        <span>{{viewModel.registration.favouriteCity}}</span>
+    </p>
+    <p>
+        <label>Do you like traveling? : </label>
+        <span>{{viewModel.registration.likeTraveling}}</span>
+    </p>
 </div>

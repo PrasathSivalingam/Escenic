@@ -1,3 +1,7 @@
 ﻿<div>
-    test
+    <p>Gender : <span class="radioValue">{{ viewModel.registration.gender }}</span> </p>
+    <md-radio-group ng-model="viewModel.registration.gender">
+        <md-radio-button value="Male"> Male </md-radio-button>
+        <md-radio-button value="Female"> Female </md-radio-button>
+    </md-radio-group>
 </div>
