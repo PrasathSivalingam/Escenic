@@ -1,3 +1,11 @@
+"use strict";
+/**
+ * @ngdoc function
+ * @name app.web.services:Datacontext
+ * @description
+ * # Datacontext
+ * Service class to serve data to registration module
+ */
 var app;
 (function (app) {
     var web;
@@ -7,6 +15,7 @@ var app;
             var Datacontext = (function () {
                 function Datacontext() {
                 }
+                // returns a list of cities
                 Datacontext.prototype.getCities = function () {
                     return ["Oslo", "Bergan", "Florø"];
                 };

@@ -26,7 +26,8 @@ module.exports = function(config) {
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/chai/chai.js',
         'bower_components/mocha/mocha.js',
-      'app/scripts/**/*.js',
+      'app/config/**/*.js',
+      'app/common/**/*.js',
       'app/modules/**/*.js',
       'app/model/*.js',
       'test/spec/**/*.js'

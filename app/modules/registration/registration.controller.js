@@ -2,9 +2,9 @@
 "use strict";
 /**
  * @ngdoc function
- * @name escenicApp.controller:MainCtrl
+ * @name app.web.controller:RegistrationCtrl
  * @description
- * # MainCtrl
+ * # RegistrationCtrl
  * Controller of the registration module
  */
 var app;
@@ -40,6 +40,7 @@ var app;
                     this.addWatch();
                     this.initializeRegistartion();
                 }
+                //add scope watches
                 RegistrationCtrl.prototype.addWatch = function () {
                     var _this = this;
                     this.$scope.$watch('viewModel.selectedStep', function (current, old) {
@@ -50,6 +51,7 @@ var app;
                         _this.isLastStep = current === _this.steps.length - 1;
                     });
                 };
+                //initialization on variables and data loads
                 RegistrationCtrl.prototype.initializeRegistartion = function () {
                     //initialize variables
                     this.selectedStep = 0;

@@ -2,9 +2,9 @@
 "use strict";
 /**
  * @ngdoc function
- * @name escenicApp.controller:MainCtrl
+ * @name app.web.controller:RegistrationCtrl
  * @description
- * # MainCtrl
+ * # RegistrationCtrl
  * Controller of the registration module
  */
 
@@ -58,6 +58,7 @@ module app.web.controllers {
 
         }
 
+        //add scope watches
         private addWatch() {
             this.$scope.$watch('viewModel.selectedStep', (current, old) =>{
                 if (current===undefined) return;
@@ -68,6 +69,7 @@ module app.web.controllers {
 
         }
 
+        //initialization on variables and data loads
         private initializeRegistartion() {
             //initialize variables
             this.selectedStep = 0;
