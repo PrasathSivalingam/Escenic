@@ -1,9 +1,11 @@
 var application = angular.module('app.web');
 application.config(function ($routeProvider) {
-    $routeProvider.when('/', {
+    $routeProvider
+        .when('/', {
         templateUrl: 'modules/registration/registration.html',
         controller: 'app.web.controllers.RegistrationCtrl'
-    }).otherwise({
+    })
+        .otherwise({
         redirectTo: '/'
     });
 });

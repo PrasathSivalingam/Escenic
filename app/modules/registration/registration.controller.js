@@ -26,16 +26,13 @@ var app;
                         {
                             title: 'Step 1',
                             templateUrl: 'modules/registration/step1.html'
-                        },
-                        {
+                        }, {
                             title: 'Step 2',
                             templateUrl: 'modules/registration/step2.html'
-                        },
-                        {
+                        }, {
                             title: 'Step 3',
                             templateUrl: 'modules/registration/step3.html'
-                        },
-                        {
+                        }, {
                             title: 'Step 4',
                             templateUrl: 'modules/registration/step4.html'
                         }
